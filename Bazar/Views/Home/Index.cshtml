@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Bazar.Models.Product>
+
+<h1>Products</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product name</th>
+            <th>Price in $</th>
+            <th>Product category </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Price</td>
+                <td>@item.Category.CategoryName</td>
+            </tr>
+        }
+    </tbody>
+</table>
